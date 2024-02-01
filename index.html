@@ -1,46 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <!-- Title -->
-    <title>Comments</title>
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <header>
-      <h1 class="text-3xl font-semibold text-gray-700 px-10 py-4 mb-3 border-b-4">Comments</h1>
-    </header>
-    <main class="container flex mx-auto gap-6">
-      <div class="basis-1/3">
-        <div class="p-4 border rounded-xl ">
-          <h2 class="text-xl font-semibold text-gray-600 border-b pb-3 mb-3">Add Comment</h2>
-          <label class="block mb-1">Name</label>
-          <input type="text" class="mb-3 block border rounded-md focus-visible:outline-gray-400">
-          <label class="block mb-1">Username</label>
-          <input type="text" class="mb-3 block border rounded-md focus-visible:outline-gray-400">
-          <label class="block mb-1">Comment</label>
-          <input type="text" class="mb-3 block border rounded-md focus-visible:outline-gray-400">
-          <label class="block mb-1">Rating</label>
-          <select class="border rounded-md focus-visible:outline-gray-400">
-            <option value="1" class="bg-gray-200">1 star</option>
-            <option value="2" class="bg-gray-200">2 star</option>
-            <option value="3" class="bg-gray-200">3 star</option>
-            <option value="4" class="bg-gray-200">4 star</option>
-            <option value="5" class="bg-gray-200">5 star</option>
-          </select>
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <!-- Title -->
+  <title>Comments</title>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <h1 class="text-3xl font-semibold text-gray-700 px-10 py-4 mb-3 shadow-md">Comments</h1>
+  </header>
+  <main class="container md:flex mx-auto px-3 gap-6">
+    <div class="basis-1/3 mb-4">
+      <div class="p-4 border-2 rounded-xl shadow-lg">
+        <h2 class="text-xl font-semibold text-gray-600 border-b pb-3 mb-3">Add Comment</h2>
+        <div class="flex gap-3">
+          <div class="basis-1/2">
+            <label class="block mb-1 text-gray-500">Username :</label>
+            <input type="text" class="w-full mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500">
+          </div>
+          <div class="basis-1/2">
+            <label class="block mb-1 text-gray-500">Email :</label>
+            <input type="text" class="w-full mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500">
+          </div>
+        </div>
+        <label class="block mb-1 text-gray-500">Comment :</label>
+        <textarea
+          class="w-full aspect-[21/9] mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500"></textarea>
+        <div class="flex justify-between items-end">
+          <div>
+            <label class="block mb-1 text-gray-500">Rating :</label>
+            <select class="border-2 p-1 rounded-md focus-visible:outline-gray-400 text-gray-600">
+              <option value="1">1 star</option>
+              <option value="2">2 star</option>
+              <option value="3">3 star</option>
+              <option value="4">4 star</option>
+              <option value="5">5 star</option>
+            </select>
+          </div>
+          <button class="inline-flex items-center gap-2 bg-gray-600 text-white ms-auto px-3 py-1 rounded-md">
+            Send
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path
+                d="M2.87 2.298a.75.75 0 0 0-.812 1.021L3.39 6.624a1 1 0 0 0 .928.626H8.25a.75.75 0 0 1 0 1.5H4.318a1 1 0 0 0-.927.626l-1.333 3.305a.75.75 0 0 0 .811 1.022 24.89 24.89 0 0 0 11.668-5.115.75.75 0 0 0 0-1.175A24.89 24.89 0 0 0 2.869 2.298Z" />
+            </svg>
+          </button>
         </div>
       </div>
-      <div class="basis-2/3">
-        <div class="basis-1/3">
-          <div class="p-4 border rounded-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illo ratione pariatur voluptatibus, vero consequatur repudiandae voluptate, tenetur obcaecati sint, corporis fuga at natus? Odio voluptate esse accusamus eum? Sapiente.
-          </div>
+    </div>
+    <div class="basis-2/3 mb-4">
+      <div class="p-4 border-2 rounded-xl shadow-lg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illo ratione pariatur voluptatibus, vero
+        consequatur repudiandae voluptate, tenetur obcaecati sint, corporis fuga at natus? Odio voluptate esse
+        accusamus eum? Sapiente.
       </div>
-    </main>
-  </body>
+  </main>
+</body>
+
 </html>
