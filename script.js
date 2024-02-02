@@ -16,6 +16,20 @@ class Comment {
   }
 }
 
+function validate(comment) {
+  let valid_user, valid_email, valid_msg, is_valid;
+  usernameEl.classList.toggle("invalid", (valid_user = comment.username) == "");
+  emailEl.classList.toggle("invalid", (valid_email = comment.email) == "");
+  messageEl.classList.toggle("invalid", (valid_msg = comment.message) == "");
+
+  is_valid = valid_user && valid_email && valid_msg;
+
+  if (is_valid) {
+    comments.unshift(comment);
+    print_comments();
+  }
+}
+
 function addComment() {
   let comment = new Comment(
     usernameEl.value,
@@ -24,9 +38,7 @@ function addComment() {
     ratingEl.value
   );
 
-  comments.unshift(comment);
-  print_comments();
-  // print_time();
+  validate(comment);
 }
 
 function print_time() {
@@ -45,7 +57,7 @@ function print_comments() {
 
   comments.forEach(comment => {
     comment_list.innerHTML += `<div class="p-3 border rounded-md">
-    <p>${comment.username} <i class="text-gray-300 text-sm">(${comment.email})</i></p>
+    <p>${comment.username} <i class="text-gray-400 text-sm">(${comment.email})</i></p>
     <p class="border-y px-2 py-3 my-2 max-h-48 overflow-y-auto">${comment.message}</p>
     <p class="flex justify-between">
       <span class="flex items-center gap-2">
