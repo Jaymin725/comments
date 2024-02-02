@@ -26,20 +26,21 @@
         <div class="flex gap-3">
           <div class="basis-1/2">
             <label class="block mb-1 text-gray-500">Username :</label>
-            <input type="text" class="w-full mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500">
+            <input id="username" type="text" class="w-full mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500">
           </div>
           <div class="basis-1/2">
             <label class="block mb-1 text-gray-500">Email :</label>
-            <input type="text" class="w-full mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500">
+            <input id="email" type="text" class="w-full mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500">
           </div>
         </div>
         <label class="block mb-1 text-gray-500">Comment :</label>
         <textarea
-          class="w-full aspect-[21/9] mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500"></textarea>
-        <div class="flex justify-between items-end">
+          class="w-full aspect-[21/9] mb-3 p-1 block border-2 rounded-md focus-visible:outline-gray-500"
+          id="comment-msg"></textarea>
+        <div class="flex justify-between items-center">
           <div>
             <label class="block mb-1 text-gray-500">Rating :</label>
-            <select class="border-2 p-1 rounded-md focus-visible:outline-gray-400 text-gray-600">
+            <select id="rating" class="border-2 p-1 rounded-md focus-visible:outline-gray-400 text-gray-600">
               <option value="1">1 star</option>
               <option value="2">2 star</option>
               <option value="3">3 star</option>
@@ -47,7 +48,7 @@
               <option value="5">5 star</option>
             </select>
           </div>
-          <button class="inline-flex items-center gap-2 bg-gray-600 text-white ms-auto px-3 py-1 rounded-md">
+          <button id="send-button" class="inline-flex items-center gap-2 bg-gray-600 text-white ms-auto px-3 py-1 rounded-md">
             Send
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
               <path
@@ -58,12 +59,26 @@
       </div>
     </div>
     <div class="basis-2/3 mb-4">
-      <div class="p-4 border-2 rounded-xl shadow-lg">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illo ratione pariatur voluptatibus, vero
-        consequatur repudiandae voluptate, tenetur obcaecati sint, corporis fuga at natus? Odio voluptate esse
-        accusamus eum? Sapiente.
+      <div id="comment-list" class="p-4 border-2 rounded-xl shadow-lg space-y-4">
+        <!-- Comment Demo -->
+        <div class="p-3 border rounded-md">
+          <p>Username <i class="text-gray-300 text-sm">(Email)</i></p>
+          <p class="border-y px-2 py-3 my-2 max-h-48 overflow-y-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quo, officia consectetur maiores, doloribus explicabo a expedita adipisci facilis quam molestias reprehenderit blanditiis aperiam corporis laudantium quis. Voluptatem, molestias vero!
+          </p>
+          <p class="flex justify-between">
+            <span class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd" />
+              </svg>              
+              Rating
+            </span>
+            <i class="text-gray-300">Time</i>
+          </p>
+        </div>
       </div>
   </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
